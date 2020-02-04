@@ -19,7 +19,7 @@ const TextArea = styled.textarea`
 `;
 
 class MarkdownEditor extends Component {
-	state = {text: ''};
+	state = {text: '', clearEditor: false};
 
 	onInputChange(e) {
 		e.preventDefault();
@@ -35,6 +35,11 @@ class MarkdownEditor extends Component {
 		this.props.trackInput(this.state.text);
 	}
 
+	componentDidUpdate(prevProps) {
+		if (prevProps.clearEditor !== this.props.clearEditor) {
+			this.setState({text: '', clearEditor: false});
+		}
+	}
 	render() {
 		return (
 			<div className="ui transparent fluid input" style={{height: '100%'}}>

@@ -36,6 +36,9 @@ class MarkdownPreview extends Component {
 		}
 	}
 
+	clearEditor(e) {
+		this.props.clearEditor(e);
+	}
 	copytoClipBoard() {
 		copy(this.state.parsedMD);
 		this.setState({labelClass: 'ui right pointing label visible'});
@@ -56,6 +59,12 @@ class MarkdownPreview extends Component {
 						icon="clipboard"
 						handleClick={(e) => {
 							this.copytoClipBoard(e);
+						}}
+					/>
+					<Button
+						icon="trash"
+						handleClick={(e) => {
+							this.clearEditor(e);
 						}}
 					/>
 				</ButtonGroup>
