@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {markdown} from 'markdown';
 import copy from 'copy-to-clipboard';
 import styled from 'styled-components';
+import sanitize from 'sanitize-html';
 
 import Button from './Button';
 
@@ -23,7 +24,7 @@ class MarkdownPreview extends Component {
 	}
 
 	parseMD = (text) => {
-		const parsed = markdown.toHTML(text);
+		const parsed = sanitize(markdown.toHTML(text));
 		this.setState({parsedMD: parsed});
 	};
 	componentDidMount() {
