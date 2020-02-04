@@ -51,7 +51,7 @@ class MarkdownPreview extends Component {
 		return (
 			<div>
 				<ButtonGroup>
-					<label className={this.state.labelClass}>Copied to clipboard!</label>
+					<label className={this.state.labelClass}>Copied HTML to clipboard!</label>
 					<Button
 						icon="clipboard"
 						handleClick={(e) => {
