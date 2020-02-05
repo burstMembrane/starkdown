@@ -1,8 +1,7 @@
-# Stark-Down
-
+## Stark-Down 
+### Markdown to HTML parser 
 ____
 
-## Markdown to HTML parser 
 
 ### Features:
 
@@ -15,6 +14,8 @@ ____
 ![IMAGE](http://unsplash.it/g/200?random&gravity=center)
 
 2020 >> [Liam Power](http://www.liampower.dev)
+
+for markdown syntax go to [Markdown Cheatsheet](http://mdcheatsheet.com/)
 
 `press ENTER to render`
 

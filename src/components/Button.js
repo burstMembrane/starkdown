@@ -7,7 +7,14 @@ class Button extends Component {
 
 	render() {
 		return (
-			<button className="circular ui basic icon button" onClick={(e) => this.handleClick(e)}>
+			<button
+				data-tooltip={this.props.popup}
+				data-position="left center"
+				data-variation="mini"
+				data-inverted=""
+				className="circular ui basic icon button"
+				onClick={(e) => this.handleClick(e)}
+			>
 				<i className={`${this.props.icon}  icon`} />
 			</button>
 		);
